@@ -4,6 +4,7 @@ $(document).ready(onReady);
 
 function onReady () {
     $('#submitForm').on('click', addEmployee);
+    $('#employeeOut').on('click', '.deleteButton', deleteEmployee);
 }
 
 function addEmployee () {
@@ -43,7 +44,7 @@ function addEmployee () {
             <td> ${employeeArray[i].id}</td>
             <td> ${employeeArray[i].jobTitle}</td>
             <td> $${employeeArray[i].annualSalary}</td>
-            <td> <button>Delete</button> </td>
+            <td> <button class="deleteButton">Delete</button> </td>
         </tr> 
         `);
         
@@ -57,4 +58,8 @@ function addEmployee () {
     if (salarySum > 20000) {
         $('span').addClass('redColor');
     }
+}
+
+function deleteEmployee() {
+    $(this).parent().parent().remove();
 }
