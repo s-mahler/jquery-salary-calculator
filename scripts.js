@@ -42,7 +42,7 @@ function addEmployee () {
             <td> ${employeeArray[i].lastName}</td>
             <td> ${employeeArray[i].id}</td>
             <td> ${employeeArray[i].jobTitle}</td>
-            <td> ${employeeArray[i].annualSalary}</td>
+            <td> $${employeeArray[i].annualSalary}</td>
             <td> <button>Delete</button> </td>
         </tr> 
         `);
