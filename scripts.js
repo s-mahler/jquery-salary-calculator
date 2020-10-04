@@ -14,13 +14,15 @@ function addEmployee () {
         jobTitle: $('#jobTitleIn').val(),
         annualSalary: $('#annualSalaryIn').val()
     };
+    
     employeeArray.push(employeeObject);
-    console.log(employeeArray);
+    
     $('#firstNameIn').val('');
     $('#lastNameIn').val('');
     $('#idIn').val('');
     $('#jobTitleIn').val('');
     $('#annualSalaryIn').val('');
+    
     $('#employeeOut').empty().append(`
         <tr>
             <th>First Name</th>
@@ -30,6 +32,9 @@ function addEmployee () {
             <th>Annual Salary</th>
         </tr>
     `);
+
+    let salarySum = 0;
+
     for (let i = 0; i < employeeArray.length; i++) {
         $('#employeeOut').append(`
         <tr>    
@@ -41,5 +46,8 @@ function addEmployee () {
             <td> <button>Delete</button> </td>
         </tr> 
         `);
+        
+        salarySum += Number(employeeArray[i].annualSalary);
     }
+    $('#sum').empty().append(salarySum);
 }

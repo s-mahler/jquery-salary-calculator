@@ -1,8 +1,24 @@
-#submitForm {
-    margin-left: 50%;
-    margin-right: 50%;
+/* #submitForm {
 }
 
 #inputs {
-    text-align: center;
+} */
+
+table {
+    border-collapse: collapse;
+}
+
+th{
+    border: 1px solid black;
+    text-align: left;
+    background-color: #878787;
+}
+  
+td{
+    border: 1px solid black;
+    text-align: left;
+}
+  
+tr:nth-child(even) {
+    background-color: lightgray;
 }
