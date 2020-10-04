@@ -19,6 +19,10 @@ td{
     text-align: left;
 }
   
-tr:nth-child(even) {
+tr:nth-child(odd) {
     background-color: lightgray;
+}
+
+.redColor {
+    background-color: red;
 }
