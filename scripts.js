@@ -48,14 +48,14 @@ function addEmployee () {
         </tr> 
         `);
         
-        salarySum += Number(employeeArray[i].annualSalary);
+        salarySum += (Number(employeeArray[i].annualSalary))/12;
     }
     
     $('#sum').empty().append(`
-        Total Monthly Salary Cost: <span>$${salarySum}</span>
+        Total Monthly Salary Cost: <span>$${salarySum.toFixed(2)}</span>
     `);
     
-    if (salarySum > 20000) {
+    if ((salarySum) > 20000) {
         $('span').addClass('redColor');
     }
 }
